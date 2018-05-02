@@ -1,0 +1,10 @@
+.DS_Store
+package-lock.json
+yarn-debug.log*
+yarn-error.log*
+.env
+
+node_modules/
+build/
+src/database/prisma.generated.graphql
+src/database/prisma.generated.js

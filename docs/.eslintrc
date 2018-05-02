@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "jest"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:jest/recommended"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "arrow-body-style": 0,
+    "no-plusplus": 0,
+    "prefer-destructuring": ["error", {"object": false, "array": true}],
+    "remark-lint": 0
+  }
+}

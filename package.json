@@ -1,0 +1,37 @@
+{
+  "name": "didor-doc",
+  "version": "0.0.1",
+  "description": "Didor documentation template",
+  "homepage": "https://github.com/fvena/didor-doc#readme",
+  "author": "Francisco Vena <fvena32@gmail.com>",
+  "main": "index.js",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fvena/didor-doc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fvena/didor-doc/issues"
+  },
+  "keywords": [
+    "didor",
+    "node",
+    "documentation"
+  ],
+  "dependencies": {
+    "axios": "^0.18.0",
+    "prismjs": "^1.14.0",
+    "vue-prism-component": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "vuepress": "^0.8.4"
+  }
+}
