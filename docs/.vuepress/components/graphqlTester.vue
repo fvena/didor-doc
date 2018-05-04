@@ -29,11 +29,12 @@ import 'prismjs'
 import 'prismjs/themes/prism.css'
 import 'prismjs/components/prism-json'
 import Prism from 'vue-prism-component'
+import splitPane from 'vue-splitpane'
 
 
 export default {
   name: 'graphqlTester',
-  components: { Prism },
+  components: { Prism, splitPane },
   data () {
     return {
       code: '',
@@ -42,15 +43,17 @@ export default {
   },
   methods: {
     send (event) {
-      axios.post('http://localhost:4000/', {
-        headers: {'Content-Type': 'application/json'},
-        query: this.code
+      axios.post('http://localhost:8000/blog', {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        query: this.code,
       })
       .then(response => {
         this.result = response.data.data;
       })
       .catch(error => {
-        console.log(error)
+        console.log(error.response);
         this.result = ''
       })
     },
@@ -100,7 +103,8 @@ export default {
   outline none
 
 .graphqlTester__result
-  padding 1.5rem
+  padding 1.5rem !important
   margin 0 !important
-  height calc(100% - 2rem)
+  height calc(100% - 3rem)
+  font-size 13px
 </style>
